@@ -1,0 +1,459 @@
+/*
+  (c) 2012 Sergio Luján Mora
+*/
+
+/*
+  General styles
+*/
+p {
+  display: block;
+  margin: 1em 0;
+}
+
+blockquote {
+  display: block;
+  margin: 1em 40px;
+}
+
+h1 {
+  font-weight: bold;
+  margin: .67em 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin: .83em 0;
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+h4 {
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-weight: bold;
+  margin: 2.33em 0;
+}
+
+ul, menu, dir {
+  margin: 1em 0;
+}
+
+li {
+  display: list-item;
+  margin-left: 2em;
+}
+
+/*
+  Specific styles
+*/
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1.5em;
+  font-family: "Gentium Basic", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+a, a:link, a:visited, a:active, a:hover, a:focus {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #E44D26;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  outline: 2px solid #000;
+}
+
+a.no-outline {
+  outline: 0;
+}
+
+a.no-outline img:hover {
+  outline: 2px solid #000;
+}
+
+header {
+  background: #e3e3e3;
+  color: #E44D26;
+  /* Same values as .marginContent */
+  padding: 20px 5%;
+  margin: 0;
+}
+
+hgroup {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+hgroup * {
+  margin: 0;
+  padding: 0;
+}
+
+hgroup h1 a, hgroup h1 a:link, hgroup h1 a:visited, hgroup h1 a:active, hgroup h1 a:hover, hgroup h1 a:focus {
+  font-family: "Gentium Basic", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.3em;
+  color: #E44D26;
+  text-decoration: none;
+}
+
+hgroup h1 {
+  font-size: 1.8em;
+}
+
+hgroup h2 {
+  font-size: 1.8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 180%;
+}
+
+h2 {
+  font-size: 160%;
+}
+
+h3 {
+  font-size: 140%;
+}
+
+h4 {
+  font-size: 120%;
+}
+
+img {
+  margin-top: 20px;
+}
+
+code {
+  font-family: Courier, serif;
+  background-color: #EBEBEB;
+}
+
+blockquote {
+  background-color: #EBEBEB;
+  font-style: italic;
+  padding: 1em;
+}
+
+pre {
+  font-family: Courier, serif;
+  background-color: #EBEBEB;
+  padding: 1em;
+  overflow: auto;
+}
+
+footer {
+  text-align: right;
+  margin: 0;
+  padding-top: 20px;  
+}
+
+footer div {
+  border-top: 2px solid #000;
+  padding-top: 50px;
+}
+
+footer  p, footer img {
+  margin: 0;
+}
+
+
+#numberLesson {
+
+}
+
+#titleLesson {
+
+}
+
+#mainContent {
+  clear: both;
+}
+
+#logos {
+  float: left;
+}
+
+#logos a {
+  outline: 0;
+}
+
+#logos a img:hover {
+  outline: 2px solid #000;
+}
+
+
+.prevNextNavigation {
+  background-color: #EBEBEB;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+.marginContent {
+  margin: 10px 5%;
+  position: relative;
+}
+
+.prevLesson {
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+.prevLesson:before {
+  content: "<< ";
+}
+
+.nextLesson {
+  display: block;
+  text-align: right;
+}
+
+.nextLesson:after {
+  content: " >>";
+}
+
+.center {
+  text-align: center;
+}
+
+.imgMaxWidthSmall img {
+  width: 100%;
+  max-width: 320px;
+}
+
+.imgMaxWidthMedium img {
+  width: 100%;
+  max-width: 480px;
+}
+
+.imgMaxWidthLarge img {
+  width: 100%;
+  max-width: 640px;
+}
+
+.imgMaxWidthSmall img, .imgMaxWidthMedium img, .imgMaxWidthLarge img {
+  margin-right: 20px;
+}
+
+.imgMaxWidthSmall a, .imgMaxWidthMedium a, .imgMaxWidthLarge a {
+  outline: 0;
+}
+
+.imgMaxWidthSmall a img:hover, .imgMaxWidthMedium a img:hover, .imgMaxWidthLarge a img:hover {
+  outline: 2px solid #000;
+}
+
+
+/*------------------------------------*\
+	NAV
+\*------------------------------------*/
+/* http://csswizardry.com/2011/02/creating-a-pure-css-dropdown-menu/ */
+#dropdown{
+    margin-left: 0;
+	list-style:none;
+	font-weight:bold;
+	/*margin-bottom:10px;*/
+	/* Clear floats */
+	float:left;
+	width:100%;
+	/* Bring the nav above everything else--uncomment if needed. */
+	position:relative;
+	z-index: 5;
+}
+#dropdown li{
+    margin-left: 0;
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#dropdown a{
+	display:block;
+	padding:5px;
+	color:#fff;
+	background:#E44D26;
+	text-decoration:none;
+}
+#dropdown a:hover{
+	color:#fff;
+	background:#E44D26;
+	text-decoration:underline;
+}
+
+/*--- DROPDOWN ---*/
+#dropdown ol{
+	background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+	background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	font-size: 0.9em;
+}
+#dropdown ol li{
+	padding-top:2px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+}
+#dropdown ol a{
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#dropdown li:hover ol{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+}
+#dropdown li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	background:#F16529;
+	background:rgba(241, 101, 41, 0.9);
+	text-decoration:underline;
+}
+#dropdown li:hover ol a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+}
+#dropdown li:hover ol li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	background:#F16529;
+}
+
+
+
+
+@media screen and (min-width: 1921px) {
+  body {
+    font-size: 2em;
+  }
+
+  header {
+    background: #e3e3e3 url("images/html5-logo-512.png");	
+    -webkit-background-size: 512 512;
+    -moz-background-size: 512 512;
+    -ms-background-size: 512 512;
+    -o-background-size: 512 512;
+    background-size: 512 512;
+	background-repeat: no-repeat;
+    background-position: 0 20px;
+
+    padding-left: 512px;
+	padding-right: 512px;
+    min-height: 512px;
+  }
+  
+  hgroup h1 {
+    font-size: 220%;
+  }
+
+  hgroup h2 {
+    font-size: 300%;
+  }
+  
+  .marginContent {
+    margin: 60px 512px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1201px) {
+  body {
+    font-size: 1.6em;
+  }
+  
+  header {
+    background: #e3e3e3 url("images/html5-logo-256.png");	
+    -webkit-background-size: 256 256;
+    -moz-background-size: 256 256;
+    -ms-background-size: 256 256;
+    -o-background-size: 256 256;
+    background-size: 256 256;
+	background-repeat: no-repeat;
+    background-position: 0 20px;
+	
+    padding-left: 256px;
+	padding-right: 256px;
+    min-height: 256px;
+  }
+
+  hgroup h1 {
+    font-size: 180%;
+  }
+
+  hgroup h2 {
+    font-size: 260%;
+  }
+  
+  .marginContent {
+    margin: 30px 256px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1401px) {
+  body {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1601px) {
+  body {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1801px) {
+  body {
+    font-size: 1.9em;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 701px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  header {
+    background: #e3e3e3 url("images/html5-logo-128.png");	
+    -webkit-background-size: 128 128;
+    -moz-background-size: 128 128;
+    -ms-background-size: 128 128;
+    -o-background-size: 128 128;
+    background-size: 128 128;
+	background-repeat: no-repeat;
+    background-position: 0 20px;
+	
+    padding-left: 128px;
+	padding-right: 128px;
+    min-height: 128px;
+  }
+  
+  hgroup h1 {
+    font-size: 130%;
+  }
+
+  hgroup h2 {
+    font-size: 200%;
+  }
+  
+  .marginContent {
+    margin: 10px 128px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #dropdown * {
+    font-size: 0.9em;
+  }
+}
